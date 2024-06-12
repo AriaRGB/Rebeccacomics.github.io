@@ -1,1 +1,17 @@
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#Titlebar {
+    width: 100%;
+    text-align: center;
+}
+
+#UserControl {
+    position: absolute;
+    top: 90vh; left: 39vw;
+    padding: 14px;
+}
 
