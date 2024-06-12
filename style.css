@@ -9,9 +9,23 @@ html {
     text-align: center;
 }
 
+#ImageContainer {
+
+}
+
+
+
 #UserControl {
     position: absolute;
-    top: 90vh; left: 39vw;
-    padding: 14px;
+    top: 85vh; left: 33vw;
+    width: 100%;
 }
+
+.Userimagebuttons {
+    text-align: center;
+    margin: 5px;
+    padding: 15px;
+}
+
+
 
