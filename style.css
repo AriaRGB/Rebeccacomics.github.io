@@ -10,20 +10,23 @@ html {
 }
 
 #ImageContainer {
-
+    text-align: center;
 }
 
-
+#SwitchableImage {
+    width: 25vw;
+    height: 65vh;
+    filter: drop-shadow(0 0 0.75rem crimson);
+}
 
 #UserControl {
-    position: absolute;
-    top: 85vh; left: 33vw;
+    text-align: center;
     width: 100%;
 }
 
 .Userimagebuttons {
     text-align: center;
-    margin: 5px;
+    margin: 25px;
     padding: 15px;
 }
 

@@ -1,9 +1,4 @@
-I had to make this for github sites to host my "website"
-
-                        Contact info
-
-            Discord: ariawasaries
-
+Serenity wtf did you ask me to make
 
 
 
