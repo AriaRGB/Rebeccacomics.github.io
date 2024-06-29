@@ -1,1 +1,1 @@
-
+var urllist = urllist.txt
