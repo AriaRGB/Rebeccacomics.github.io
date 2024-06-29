@@ -4,79 +4,25 @@ html {
     overflow-x: hidden;
 }
 
-body {
-    /*background-image: url();*/
-    /*background-color: aquamarine;*/
-}
-
-#Navmenu {
-    list-style-position: inside;
-    margin: 0;
-    padding: 0;
-    position: sticky;
-}
-
-li {
-    border-left: 2px #696969 solid;
-    padding-left: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    list-style-type: none;
-    width: 25%;
-}
-/*make an animation */
-@keyframes smoothpink {
-  0% {
-    border-left: 0px #FF6D91 solid;
-  }
-  50% {
-    border-left: 1px #FF6D91 solid;
-  }
-  100%{
-    border-left: 2px #FF6D91 solid;
-  }
-}
-
-li:hover {
-    animation: smoothpink 2s infinite linear;
-    border-left: 2px #FF6D91 solid;
-    font-weight: bold;
-    filter: drop-shadow(0 0 0.25rem black);
-}
-
 #Titlebar {
     width: 100%;
     text-align: center;
 }
 
-#ImageContainer {
+#UserControl {
     text-align: center;
+    position: relative;
+    top:20px;
+    padding: 14px;
 }
+
 
 #SwitchableImage {
     width: 25vw;
     height: 65vh;
     filter: drop-shadow(0 0 0.75rem crimson);
-    border-radius: 2%;
 }
 
-#UserControl {
+#ImageContainer {
     text-align: center;
-    width: 100%;
 }
-
-#Socialtab {
-    position: absolute;
-    top:10vh;
-    border-left: hidden;
-    width: 12vw;
-}
-
-.Userimagebuttons {
-    text-align: center;
-    margin: 25px;
-    padding: 15px;
-}
-
-
-
