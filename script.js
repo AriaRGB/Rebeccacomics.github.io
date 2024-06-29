@@ -1,5 +1,23 @@
 const Switchableimage = document.getElementById("SwitchableImage")
 
+const titleElement = document.getElementById('Titletext');
+const fullTitle = "Rebecca's Cove_";
+let currentText = 'R_';
+let currentIndex = 1; // Start after 'R_'
+
+function animateTitle() {
+    if (currentIndex < fullTitle.length) {
+        currentText = fullTitle.slice(0, currentIndex + 1) + '_';
+        currentIndex++;
+        titleElement.textContent = currentText;
+        setTimeout(animateTitle, 300); // Adjust the speed of the animation here
+    } else {
+        titleElement.textContent = fullTitle;
+    }
+}
+
+setTimeout(animateTitle, 300); // Initial delay before starting the animation
+
 let currentLinkIndex = 0;
 let links = [];
 
