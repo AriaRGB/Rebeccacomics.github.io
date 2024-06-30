@@ -1,4 +1,5 @@
-const Switchableimage = document.getElementById("SwitchableImage")
+const Switchableimage = document.getElementById("SwitchableImage");
+let body = document.getElementById("bgimage");
 
 const titleElement = document.getElementById('Titletext');
 const fullTitle = "Rebecca's Cove_";
@@ -48,6 +49,7 @@ function switchImageSource() {
     const SwitchableImage = document.getElementById('SwitchableImage');
     if (links && links.length > 0) {
         SwitchableImage.src = links[currentLinkIndex];
+        body.style.backgroundImage = `url(${links[currentLinkIndex]})`;
         currentLinkIndex = (currentLinkIndex + 1) % links.length; // Move to the next link
         console.log(currentLinkIndex)
     } else {
@@ -59,6 +61,7 @@ function switchbackImageSource() {
     const SwitchableImage = document.getElementById('SwitchableImage');
     if (links && links.length > 0) {
         SwitchableImage.src = links[currentLinkIndex];
+        body.style.backgroundImage = `url(${links[currentLinkIndex]})`;
         currentLinkIndex = (currentLinkIndex - 1) % links.length; // Move back one link
         console.log(currentLinkIndex)
     } else {
@@ -88,8 +91,9 @@ main();
 // Image value handler
 
 function Indexcheck() {
-    if (currentLinkIndex === undefined || currentIndex <= -0) {
-    var currentLinkIndex = 0;
+    if (currentLinkIndex === undefined || currentLinkIndex < -0 || fetchLocalFile === false) {
+    currentLinkIndex = 1;
+    console.log("Mechanically perfect with only the flaw of believing, maybe we don't have enough dedication.")
     }
 }
 

@@ -2,11 +2,23 @@ html {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#bgimage{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-image: url();
+    background-repeat: repeat;
+    background-size: cover;
+    filter: blur(5px)   
 }
 
 #Titlebar {
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 #UserControl {
@@ -28,4 +40,8 @@ html {
 
 #ImageContainer {
     text-align: center;
+}
+
+#NextImage{
+    width: 32px;
 }
