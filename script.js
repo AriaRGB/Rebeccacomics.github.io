@@ -10,18 +10,18 @@ function animateTitle() {
         currentText = fullTitle.slice(0, currentIndex + 1) + '_';
         currentIndex++;
         titleElement.textContent = currentText;
-        setTimeout(animateTitle, 300); // Adjust the speed of the animation here
+        setTimeout(animateTitle, 300); // animation speed
     } else {
         titleElement.textContent = fullTitle;
     }
 }
 
-setTimeout(animateTitle, 300); // Initial delay before starting the animation
+setTimeout(animateTitle, 300); // delay
 
 let currentLinkIndex = 0;
 let links = [];
 
-// Function to fetch the local file
+// fetch file
 async function fetchLocalFile(filePath) {
     try {
         const response = await fetch(filePath);
@@ -36,14 +36,14 @@ async function fetchLocalFile(filePath) {
     }
 }
 
-// Function to extract links from the text
+// get links from the text
 function extractLinks(text) {
     // Regular expression to match URLs
     const urlRegex = /https?:\/\/[^\s]+/g;
     return text.match(urlRegex);
 }
 
-// Function to switch the image source to the next link
+// switch image to the next one
 function switchImageSource() {
     const SwitchableImage = document.getElementById('SwitchableImage');
     if (links && links.length > 0) {
@@ -68,11 +68,11 @@ function switchbackImageSource() {
 
 // Main function to fetch the file, extract links, and initialize the image source
 async function main() {
-    const filePath = '/boring stuff/urllist.txt'; // Change this to the path of your local file
+    const filePath = '/boring stuff/urllist.txt';
     const fileContent = await fetchLocalFile(filePath);
     if (fileContent) {
         links = extractLinks(fileContent);
-        switchImageSource(); // Initialize the first image
+        switchImageSource(); // Init the first image
     }
 }
 
