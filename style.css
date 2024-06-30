@@ -13,9 +13,12 @@ html {
     text-align: center;
     position: relative;
     top:20px;
-    padding: 20px;
+    padding: 20px
 }
 
+.userbuttons {
+    margin: 15px;
+}
 
 #SwitchableImage {
     width: 25vw;

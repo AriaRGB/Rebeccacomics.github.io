@@ -88,7 +88,7 @@ main();
 // Image value handler
 
 function Indexcheck() {
-    if (currentLinkIndex === undefined) {
+    if (currentLinkIndex === undefined || currentIndex <= -0) {
     var currentLinkIndex = 0;
     }
 }
