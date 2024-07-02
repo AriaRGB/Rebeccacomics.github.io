@@ -6,13 +6,14 @@ html {
 }
 
 #bgimage{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
+    left:0px; top:0px;
     background-image: url();
     background-repeat: repeat;
     background-size: cover;
-    filter: blur(5px)   
+    filter: blur(0.75rem)   
 }
 
 #Titlebar {
