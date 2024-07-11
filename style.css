@@ -1,8 +1,7 @@
 html {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    
 }
 
 #bgimage{
@@ -23,15 +22,14 @@ html {
 }
 
 #UserControl {
+    width: 55vw;
     text-align: center;
-    position: relative;
-    top:20px;
-    padding: 20px
+    position: absolute;
+    top:30vh; left:35vw;
+    padding: 20px;
 }
 
-.userbuttons {
-    margin: 15px;
-}
+.userbuttons {}
 
 #SwitchableImage {
     width: 25vw;
@@ -44,5 +42,24 @@ html {
 }
 
 #NextImage{
-    width: 32px;
+    width: 100px;
+}
+
+#BackImage{
+    width: 100px;
+    transform: scaleX(-1);
+}
+
+
+#nextImageButton{
+    background-color: transparent;
+    border-color: transparent;
+    margin-left: 0%;
+}
+
+#beforeImageButton{
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    left:-50%
 }
