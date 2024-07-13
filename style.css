@@ -55,6 +55,7 @@ html {
     background-color: transparent;
     border-color: transparent;
     margin-left: 0%;
+    animation-play-state: running;
 }
 
 #beforeImageButton{
@@ -63,3 +64,6 @@ html {
     position: relative;
     left:-50%
 }
+
+/*Hey, this is the animation section of the css please don't fuck this up. MAKE SURE TO LABEL WHAT STUFF IS FOR*/
+

@@ -50,8 +50,15 @@ function switchImageSource() {
     if (links && links.length > 0) {
         SwitchableImage.src = links[currentLinkIndex];
         body.style.backgroundImage = `url(${links[currentLinkIndex]})`;
+
+        SwitchableImage.onload = function() {
+            console.clear()
+            console.log("Image Data: \n" + "Height: " + `${SwitchableImage.naturalHeight}` + "\n" + "Width: " + `${SwitchableImage.naturalWidth}` + "\n" + "Link: " + `${links[currentLinkIndex]}` + "\n" + "LinkPosition: " + currentLinkIndex)
+            //ParsedImage.width = SwitchableImage.naturalWidth
+            //ParsedImage.height = SwitchableImage.naturalHeight
+        };
+        
         currentLinkIndex = (currentLinkIndex + 1) % links.length; // Move to the next link
-        console.log(currentLinkIndex)
     } else {
         console.error('No valid links found to switch the image source.');
     }
@@ -97,4 +104,11 @@ function Indexcheck() {
     }
 }
 
-setInterval(Indexcheck, 100)
+setInterval(Indexcheck, 100);
+
+const Nextbutton = document.getElementById('nextImageButton')
+
+ let ParsedImage = {
+    height: "",
+    width: ""
+ };
