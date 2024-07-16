@@ -5,6 +5,7 @@ const titleElement = document.getElementById('Titletext');
 const fullTitle = "Rebecca's Cove_";
 let currentText = 'R_';
 let currentIndex = 1; // Start after 'R_'
+let imagetype = "Not Selected"
 
 function animateTitle() {
     if (currentIndex < fullTitle.length) {
@@ -53,7 +54,20 @@ function switchImageSource() {
 
         SwitchableImage.onload = function() {
             console.clear()
-            console.log("Image Data: \n" + "Height: " + `${SwitchableImage.naturalHeight}` + "\n" + "Width: " + `${SwitchableImage.naturalWidth}` + "\n" + "Link: " + `${links[currentLinkIndex]}` + "\n" + "LinkPosition: " + currentLinkIndex)
+            if (Switchableimage.naturalHeight === 768) {
+                    Nextbutton.style.left = "-3%"
+                        Backbutton.style.left = "-50%"
+                            Switchableimage.style.width = "25vw"
+                                Switchableimage.style.height = "70vh"
+                    imagetype = "Portrait"
+            } else if (Switchableimage.naturalWidth === 768) {
+                    Nextbutton.style.left = "-0%"
+                        Backbutton.style.left = "-53%"
+                            Switchableimage.style.height = "65vh"
+                                Switchableimage.style.width = "30vw"
+                    imagetype = "Landscape"
+            }
+            console.log("Image Data: \n" + "Height: " + `${SwitchableImage.naturalHeight}` + "\n" + "Width: " + `${SwitchableImage.naturalWidth}` + "\n" + "Link: " + `${links[currentLinkIndex]}` + "\n" + "Position: " + currentLinkIndex + "\n" + "Image Type: " + `${imagetype}`)
             //ParsedImage.width = SwitchableImage.naturalWidth
             //ParsedImage.height = SwitchableImage.naturalHeight
         };
@@ -107,8 +121,9 @@ function Indexcheck() {
 setInterval(Indexcheck, 100);
 
 const Nextbutton = document.getElementById('nextImageButton')
+const Backbutton = document.getElementById('beforeImageButton')
 
- let ParsedImage = {
+ /*let ParsedImage = {
     height: "",
     width: ""
- };
+ };*/
