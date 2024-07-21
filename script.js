@@ -92,7 +92,7 @@ function switchbackImageSource() {
 
 // Main function to fetch the file, extract links, and initialize the image source
 async function main() {
-    const filePath = '/boring stuff/urllist.txt';
+    const filePath = './Assets/urllist.txt';
     const fileContent = await fetchLocalFile(filePath);
     if (fileContent) {
         links = extractLinks(fileContent);
